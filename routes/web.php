@@ -1,10 +1,9 @@
 <?php
 
+use App\Http\Controllers\AgentController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('main');
-// });
-
-Route::resource('/', CategoryController::class);
+Route::get('/' , [AgentController::class, 'index']);
+// Route::resource('/', CategoryController::class);
+Route::resource('agents' , AgentController::class);
